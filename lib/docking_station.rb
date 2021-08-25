@@ -10,6 +10,14 @@ class DockingStation
         puts "...."
     end    
 
+    def docked_bike
+      puts ".."
+    end
+
+    def bike_in_station?
+      puts "..."
+    end 
+
 end
     
 
