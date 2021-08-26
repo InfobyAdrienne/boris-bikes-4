@@ -1,23 +1,26 @@
 require 'docking_station'
+require 'bike'
 #require_relative '../lib/docking_station'
 
 # In spec/dockingstation_spec.rb
 describe DockingStation do
 
+  it { is_expected.to respond_to(:release_bike) } 
+# docking_station = DockingStation.new
+# expect(docking_station).to respond_to(:release_bike)
+
     it "wants to release the bike" do
-        docking_station = DockingStation.new
-        expect(docking_station).to respond_to :release_bike
+        bike = subject.release_bike
+        # Bike.new
+        # bike_released = Bike.new
+        # expect(subject.release_bike).to eq bike
+        expect(bike).to be_working
     end
 
-    it "returns a bike" do
-        docking_station = DockingStation.new
-        expect(docking_station).to respond_to :get_bike
-    end
-
-    it "returns bike status" do
-        bike_status = Bike.new
-        expect(bike_status).to respond_to :working?
-    end
+    # it "returns a bike" do
+        # docking_station = DockingStation.new
+        # expect(docking_station).to respond_to :get_bike
+    # end
 
     it "dock a bike at a docking station" do
       docking_station = DockingStation.new
