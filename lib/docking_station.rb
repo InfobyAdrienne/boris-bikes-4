@@ -1,5 +1,5 @@
 # require_relative '../lib/bike'
-require_relative 'bike'
+# require_relative 'bike'
 
 class DockingStation
 
@@ -9,8 +9,9 @@ class DockingStation
     #   @bike 
     # end 
 
-    def bike 
-      @bike = bike
+    def bike
+      # return the bike we docked
+      @bike
     end
   
     def release_bike
@@ -21,8 +22,10 @@ class DockingStation
         # puts "...."
     # end    
 
-    def docked_bike
-      puts ".."
+    def dock(bike)
+      # Use an instance variable to store the bike
+      # in the 'state' of this instance
+      @bike = bike 
     end
 
     def bike_in_station?
