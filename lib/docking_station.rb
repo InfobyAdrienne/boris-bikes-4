@@ -14,11 +14,13 @@ class DockingStation
       @bike
     end
   
-    def release_bike
+    def release_bike(bike)
+      @bike = bike 
+      raise "This is an exception" 
       Bike.new
     end
 
-    # def get_bike
+		# def get_bike
         # puts "...."
     # end    
 
@@ -33,6 +35,4 @@ class DockingStation
     end 
 
 end
-    
-
 

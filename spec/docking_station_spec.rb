@@ -14,7 +14,8 @@ describe DockingStation do
 
 
     it "wants to release the bike" do
-        bike = subject.release_bike
+        bike = Bike.new
+      # bike = subject.release_bike(bike)
         # Bike.new
         # bike_released = Bike.new
         # expect(subject.release_bike).to eq bike
@@ -37,6 +38,11 @@ describe DockingStation do
       docking_station = DockingStation.new
       expect(docking_station).to respond_to :bike_in_station?
     end 
+
+    it 'raises an error when getting a bike' do
+      bike = Bike.new
+      expect{subject.new.release_bike(bike).to raise_error}
+    end
 
 end
 
